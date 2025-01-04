@@ -1,0 +1,130 @@
+@use 'base/variables' as v;
+
+.background {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(45deg, v.$lbg1, v.$lbg2);
+
+  &.dark {
+    background: linear-gradient(45deg, v.$dbg1, v.$dbg2);
+
+    .calculator {
+      background-color: v.$dbg1;
+    }
+
+    .toggle {
+      background-color: v.$dnum;
+    }
+
+    .screen-text {
+      color: v.$dnum;
+    }
+
+    .btn {
+      color: v.$dnum;
+    }
+
+    .btn-container {
+      .btn-operator {
+        background-color: v.$dbgoperator;
+      }
+
+      .btn-number {
+        background-color: v.$dbgnumber;
+      }
+
+      #clear {
+        background: linear-gradient(to bottom, v.$dbg2, v.$dbgnumber);
+      }
+    }
+  }
+}
+
+
+
+.calculator {
+  overflow: hidden;
+  position: relative;
+  height: 48rem;
+  width: 90%;
+  max-width: 33rem;
+  padding: 2rem;
+  border-radius: 2rem;
+  box-shadow: .3rem .4rem 2rem rgba(0, 0, 0, 0.5);
+  display: grid;
+  place-items: center;
+  background-color: v.$lbg1;
+
+}
+
+.toggle {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background-color: v.$dbg1;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+.screen {
+  width: 100%;
+  margin: 4rem 5rem 3rem 2rem;
+  height: 3rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  &-text {
+    font-size: 3rem;
+    text-align: right;
+    font-weight: 700;
+    color: v.$lnum;
+  }
+
+}
+
+.btn {
+  border: none;
+  margin: .29rem;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 3rem;
+  font-size: 2rem;
+  text-align: center;
+  color: v.$lnum;
+  font-weight: 600;
+  box-shadow: 0 0 .6rem rgba(1, 1, 1, 0.8);
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.13);
+  }
+
+  ion-icon {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+}
+
+#equals {
+  height: 11.5rem;
+  border-radius: none;
+}
+
+.btn-container {
+  .btn-operator {
+    background-color: v.$lbgoperator;
+  }
+
+  .btn-number {
+    background-color: v.$lbgnumber;
+  }
+}
+
+#clear {
+  background: linear-gradient(to bottom, v.$lbg1, v.$lbgnumber);
+}

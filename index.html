@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="dist/css/app.css">
+
+</head>
+
+<body class="background dark">
+
+
+  <main class="calculator">
+
+    <div class="toggle"></div>
+
+    <div class="screen">
+      <p class="screen-text"></p>
+    </div>
+
+    <div class="btn-container">
+
+      <table>
+
+        <tr class="btn-content">
+          <td><button class="btn" id="clear">C</button></td>
+          <td><button class="btn btn-operator" id="/">/</button></td>
+          <td><button class="btn btn-operator" id="*">X</button></td>
+          <td><button class="btn btn-operator" id="backspace"><ion-icon name="backspace-outline"></ion-icon></button>
+          </td>
+        </tr>
+
+        <tr class="btn-content">
+          <td><button class="btn btn-number" id="7">7</button></td>
+          <td><button class="btn btn-number" id="8">8</button></td>
+          <td><button class="btn btn-number" id="9">9</button></td>
+          <td><button class="btn btn-operator" id="-">-</button></td>
+        </tr>
+
+        <tr class="btn-content">
+          <td><button class="btn btn-number" id="4">4</button></td>
+          <td><button class="btn btn-number" id="5">5</button></td>
+          <td><button class="btn btn-number" id="6">6</button></td>
+          <td><button class="btn btn-operator" id="+">+</button></td>
+        </tr>
+
+        <tr class="btn-content">
+          <td><button class="btn btn-number" id="1">1</button></td>
+          <td><button class="btn btn-number" id="2">2</button></td>
+          <td><button class="btn btn-number" id="3">3</button></td>
+          <td rowspan="2"><button class="btn btn-number" id="equals">=</button></td>
+        </tr>
+
+        <tr class="btn-content">
+          <td><button class="btn btn-operator" id=".">.</button></td>
+          <td><button class="btn btn-number" id="0">0</button></td>
+          <td><button class="btn btn-operator" id=",">,</button></td>
+        </tr>
+
+
+
+
+      </table>
+
+    </div>
+
+  </main>
+
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="dist/js/app.js"></script>
+</body>
+
+</html>
